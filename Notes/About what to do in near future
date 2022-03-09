@@ -1,0 +1,9 @@
+
+1)Continue to object oriented programming part like polymorphic infrastructure, friend class, encapsulation,abstraction and so on,it is necessary for bigger programs
+2)Pandas library can read .h5, .csv, .json type of libraries, also check for it is possible to write not read
+3)For larger dataset , get datas with list and convert it to dictionary then convert it to dataframa(panda like) infrastructure
+4)For loop can be used in [] brackets, there is an example in List_Comprehension
+5)Numpy is important type for image processing and it has many function in mathematical operations
+6)Tuple is mostly not used
+7)There are somehow restricted functions, They have many other functions to be used(Numpy,Pandas,Strings,List,Matplotlib)
+8)There are other visualization tools better than matplotlib
