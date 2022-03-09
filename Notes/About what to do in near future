@@ -7,3 +7,4 @@
 6)Tuple is mostly not used
 7)There are somehow restricted functions, They have many other functions to be used(Numpy,Pandas,Strings,List,Matplotlib)
 8)There are other visualization tools better than matplotlib
+9)All changes will be added later on
