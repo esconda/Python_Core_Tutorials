@@ -11,14 +11,14 @@ def main():
     # 7) Above all speed is a fast library with pandas optimized
 
     #Pandas basic methods
-    dictionary = {"NAME" : ["ali","kenan","veli","hilal","ayse","osman"], "AGE" :[15,20,30,40,60,70], "MAAS" :[100,150,200,250,300,350]}
+    dictionary = {"NAME" : ["ali","kenan","veli","hilal","ayse","osman"], "AGE" :[15,20,30,40,60,70], "SALARY" :[100,150,200,250,300,350]}
     print("Dictionary without pandas dataframe view :",dictionary)
 
     #SEEMS LIKE EXCEL VİEW
     dataframe1 = pd.DataFrame(dictionary)
 
     #FILTER VARIABLES FROM DATAFRAME
-    filtre1 = dataframe1.MAAS >200
+    filtre1 = dataframe1.SALARY >200
     filtered_data = dataframe1[filtre1]
     print("filtered data :", filtered_data)
 

@@ -5,29 +5,39 @@ def main():
     # specified property into another iterable set of values.
 
     #Example 1
-    things = [("animal", "bear"), ("animal", "duck"), ("plant", "cactus"), ("vehicle", "harley"), \
+    things = [("animal", "Lion"), ("animal", "Duck"), ("plant", "Cactus"), ("Vehicle", "Porsche"), \
           ("vehicle", "speed boat"), ("vehicle", "school bus")]
-    dic = {}
+    ddictionary = {}
     f = lambda x: x[0]
     for key, group in itertools.groupby(sorted(things, key=f), f):
-        dic[key] = list(group)
-    print(dic)
+        ddictionary[key] = list(group)
+    
+    print("*********************************")
+    print(ddictionary)
+    print("*********************************")
+    #------------
 
     #Example 2
     c = itertools.groupby(['goat', 'dog', 'cow', 1, 1, 2, 3, 11, 10, ('persons', 'man', 'woman')])
-    dic = {}
+    dictionary = {}
     for k, v in c:
-        dic[k] = list(v)
-    print(dic)
+        dictionary[k] = list(v)
+
+    print(dictionary)
+    print("*********************************")
+    #------------
 
     #Example 3
     list_things = ['goat', 'dog', 'donkey', 'mulato', 'cow', 'cat', ('persons', 'man', 'woman'), \
                    'wombat', 'mongoose', 'malloo', 'camel']
     c = itertools.groupby(list_things, key=lambda x: x[0])
-    dic = {}
+    dictionary = {}
     for k, v in c:
-        dic[k] = list(v)
-
+        dictionary[k] = list(v)
+        
+    print(dictionary)
+    print("*********************************")
+    #------------
 
 if __name__=='__main__':
     main()

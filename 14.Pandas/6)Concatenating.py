@@ -13,30 +13,30 @@ def main():
 
     # Pandas basic methods
     dictionary = {"NAME": ["ali", "kenan", "veli", "hilal", "ayse", "osman"], "AGE": [15, 20, 30, 40, 60, 70],
-                  "MAAS": [100, 150, 200, 250, 300, 350]}
+                  "SALARY": [100, 150, 200, 250, 300, 350]}
     print("Dictionary without pandas dataframe view :", dictionary)
 
     # SEEMS LIKE EXCEL VİEW
     dataframe1 = pd.DataFrame(dictionary)
 
     # Average salary with panda dataframe
-    mean_value_pd = dataframe1.MAAS.mean()  # average salary
+    mean_value_pd = dataframe1.SALARY.mean()  # average salary
     print("Average Salary :", mean_value_pd)
 
     # Average salary with numpy
-    mean_value_np = np.mean(dataframe1.MAAS)
+    mean_value_np = np.mean(dataframe1.SALARY)
     print("Average Salary Numpy :", mean_value_np)
 
     # LIST COMPREHENSION
-    dataframe1["maas_seviyesi"] = ["dusuk" if mean_value_pd > each else "yuksek" for each in
-                                   dataframe1.MAAS]  # this one is equal to belov one
+    dataframe1["Salary_Level"] = ["low" if mean_value_pd > each else "high" for each in
+                                   dataframe1.SALARY]  # this one is equal to belov one
     print(dataframe1, "\n")
     # -----------------------------------
 
     #drop and concatenating
 
     #DROP
-    dataframe1 = dataframe1.drop(["maas_seviyesi"],axis=1)#axis 0 satır drop, axis 1 sütun drop
+    dataframe1 = dataframe1.drop(["Salary_Level"],axis=1)#axis 0 satır drop, axis 1 sütun drop
     print("dropped : \n", dataframe1)
     #---------------------
 
