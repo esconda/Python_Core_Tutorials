@@ -11,7 +11,7 @@ def main():
     # 7) Above all speed is a fast library with pandas optimized
 
     #Pandas basic methods
-    dictionary = {"NAME" : ["ali","kenan","veli","hilal","ayse","osman"], "AGE" :[15,20,30,40,60,70], "MAAS" :[100,150,200,250,300,350]}
+    dictionary = {"NAME" : ["ali","kenan","veli","hilal","ayse","osman"], "AGE" :[15,20,30,40,60,70], "SALARY" :[100,150,200,250,300,350]}
     print("Dictionary without pandas dataframe view :",dictionary)
 
     #SEEMS LIKE EXCEL VİEW
@@ -25,7 +25,7 @@ def main():
     print("Add new future : ",dataframe1["new_future"])
     print("Restrict age index :",dataframe1.loc[:3,"AGE"])
     print("Another example : ", dataframe1.loc[:3, ["AGE","NAME"]])
-    print(dataframe1.loc[:,:"MAAS"]) # PRİNT ALL VALUES UNTILL TO MAAS
+    print(dataframe1.loc[:,:"SALARY"]) # PRİNT ALL VALUES UNTILL TO SALARY
 
     #REVERSING DATAFRAME
     print("reversing dataframe", dataframe1.loc[::-1,:])

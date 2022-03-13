@@ -11,7 +11,7 @@ def main():
     # 7) Above all speed is a fast library with pandas optimized
 
     #Pandas basic methods
-    dictionary = {"NAME" : ["ali","kenan","veli","hilal","ayse","osman"], "AGE" :[15,20,30,40,60,70], "MAAS" :[100,150,200,250,300,350]}
+    dictionary = {"NAME" : ["ali","kenan","veli","hilal","ayse","osman"], "AGE" :[15,20,30,40,60,70], "SALARY" :[100,150,200,250,300,350]}
 
     #SEEMS LIKE EXCEL VİEW
     dataframe1 = pd.DataFrame(dictionary)

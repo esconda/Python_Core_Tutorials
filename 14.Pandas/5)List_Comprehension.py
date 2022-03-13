@@ -29,7 +29,7 @@ def main():
     dataframe1["Salary_Level"] = ["low" if mean_value_pd > each else "high" for each in dataframe1.SALARY] #this one is equal to belov one
 
     # this one is same as above
-    # for each in dataframe1.MAAS:
+    # for each in dataframe1.SALARY:
     #     if(mean_value_pd > each):
     #         print("dusuk")
     #     else:
