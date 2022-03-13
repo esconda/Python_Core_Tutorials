@@ -1,20 +1,20 @@
 import os
 #Author: Burak Dogancay
 class Myfirstclass(object):
-    def __init__(self,isim,soyisim,maas):#Constructor
-        self.isim = isim
-        self.soyisim = soyisim
-        self.maas = maas
-        self.email = isim + soyisim+"@gmail.com"
+    def __init__(self,name,surname,salary):#Constructor
+        self.name = name
+        self.surname = surname
+        self.salary = salary
+        self.email = name + surname+"@gmail.com"
 
     def giveNameSurname(self):
-        return self.isim +""+self.soyisim
+        return self.name +""+self.surname
 
 
 def main():
     classconstructor = Myfirstclass("ali", "veli",100)
-    print("variable",classconstructor.isim)
-    print("Givesurname function : ", classconstructor.giveNameSurname())
+    print("variable",classconstructor.name)
+    print("Give Full Name Function : ", classconstructor.giveNameSurname())
 
 
 if __name__=='__main__':
