@@ -1,84 +1,121 @@
 #Author: Burak Dogancay
-#It covers changes made to existing string type variables.We can say that the string type variables are important in Python base to consider information details .
 
-def basic_String_Formatting():
-    float_Type = 25.4
-    int_Type = 20
-    str_Type = "String"
-    
-    #Formatiing output can be dteailed using str.format
-    print('{} , {} and {}'.format(float_Type,int_Type,str_Type))
-    print("---------------------")
-    
-    #Indexes can also be specified inside the brackets. The numbers correspond to indexes of the arguments passed to
-    #the str.format function (0-based).
-    print('{0}, {1}, {2}, and {1}'.format(float_Type, int_Type, str_Type))
-    print("---------------------")
-    
-    #Named arguments can be also used:
-    print("X value is: {first_val}. Y value is: {first_val}.".format(first_val=2, second_val=3))
-    print("---------------------")
-    
-    #Dictionary
-    my_dict = {'uav1': "tb2", 'uav2':"anka"}
-    print("Uavs1 is : {0[uav1]}".format(my_dict)) # "0" is optional
-    print("Uavs1 is : {0[uav2]}".format(my_dict))
-    print("---------------------")
-    
-    #List
-    my_list = ['tb2', 'akinci', 'mius']
-    print("Third element of uav is: {0[2]}".format(my_list)) # "0" is optional
-    print("---------------------")
-    
-    #Tuple
-    t = (10, 3, 5, 12, 6)
-    print('{0} {2} {1} {2} {3} {2} {4} {2}'.format(*t))
-    print("---------------------")
-#Format Literals
-#Literal format strings were introduced in PEP 498 (Python3.6 and upwards), allowing you to prepend f to the
-#beginning of a string literal to effectively apply .format to it with all variables in the current scope
-def format_Litearls():
-    uav = "tb2"
-    print('Uav is {}'.format(uav))
-    print("---------------------")
+import string
 
-#Float Formatting
-def float_Formatting():
-    print('{0:.0f}'.format(24.12345))
-    print('{0:.1f}'.format(24.12345))
-    print('{0:.5f}'.format(24.12345))
-    print('{0:.7f}'.format(24.12345))
+
+def strMethods():
+    strVar = "this is my string"
+    casefoldStr = strVar.casefold() #str.casefold creates a lowercase string that is suitable for case insensitive comparisons
+    capitalStr = strVar.capitalize() #Capitalizes first character
+    upperStr = strVar.upper()#Capitalize all characters
+    lowerStr = strVar.lower()#Lower case representation of the string
+    titleStr = strVar.title()#str.title returns the title cased version of the string
+    swapCaseStr = strVar.swapcase() #str.swapcase returns a new string object in which all lower case characters are swapped to upper case and all upper case characters to lower
+    
+    print("STRING METHODES")
+    print("Creates lower case string : ",casefoldStr)
+    print("Capitalize first character : ",capitalStr)
+    print("Upper string : ",upperStr)
+    print("Lower string : ",lowerStr)
+    print("Title of the string : ",titleStr)
+    print("Swap case of the string : ",swapCaseStr)
     print("---------------------")
     
-   #Floating point numbers can also be formatted in scientific notation or as percentages
-    print('{0:.3e}'.format(24.12345))
-    print('{0:.0%}'.format(24.12345))
+def translateCharacters():
+    #Python supports a translate method on the str type which allows you to specify the translation table (used for replacements) as well as any characters which should be deleted in the process.
+    strVar = "Translate String"
+    translationTableStr = str.maketrans("aei", "231")
+    translatedStr = strVar.translate(translationTableStr)
+    
+    print("STRING TRANSLATION METHODE")
+    print("Translated stirng is : ",translatedStr)
+    print("---------------------")
+    
+def stringModule():
+    strLetters = string.ascii_letters
+    strLowercase = string.ascii_lowercase
+    strUppercase = string.ascii_uppercase
+    
+    print("STRING MODULE")
+    print("Ascii Letters : ",strLetters)
+    print("Ascii Letters Lowercase : ",strLowercase)
+    print("Ascii Letters Uppercase : ",strUppercase)
     print("---------------------")
 
-def named_Placeholders():
-    carData = {'Honda': 'Civic', 'Bmw': 'f30'}
-    print('{Honda} {Bmw}'.format_map(carData))
+def stripUnwantedChr():
+    #Strip unwanted character in defined string
+    strVar = "The best car is my Anadol"
+    strippedChr = strVar.strip("Anadol")
+        
+    print("STRING STRIP MODULE")
+    print("Stripped string :",strippedChr)
     print("---------------------")
     
-def numeric_Values_Formatting():
-    print('{:c}'.format(65))
-    print('{:d}'.format(0x0a))
-    print('{0:x}'.format(10))
-    print('{0:X}'.format(10))
-    print('{:o}'.format(10))
-    print('{:b}'.format(10))
-    print('{Honda} {Bmw}'.format_map(carData))
+def reverseString():
+    strVar = "The best car is my Anadol"
+    #First Methode
+    reversedStr = ''.join(reversed(strVar))
+    
+    #Second Methode
+    reversedStr2 = strVar[::-1]
+    
+    print("STRING REVERSE METHODE")
+    print("Reversed string :",reversedStr)
+    print("Reversed string 2 :",reversedStr2)
+    print("---------------------")
+
+def splitString():
+    #String splitting
+    strVar = "The best car is my Anadol"
+    strSplit = strVar.split()
+    maxSplit = strVar.split(' ',maxsplit=0)#the maxsplit parameter limits the number of splittings that occur
+    strSplit2 = strVar.split("e")
+    
+    
+    print("STRING SPLIT METHODE")
+    print("Split string :",strSplit)
+    print("Max split string :",strSplit)
+    print("Split string by e :",strSplit2)
     print("---------------------")
     
-    r, g, b = (1.0, 0.4, 0.0)
-    print('#{:02X}{:02X}{:02X}'.format(int(255 * r), int(255 * g), int(255 * b)))
+def replaceChr():
+    #This is the mothode of replacing any word or character ins the string
+    strVar = "The best car is my Anadol"
+    replacedStr = strVar.replace("Anadol", "Bmw")
+    
+    print("STRING REPLACE METHODE")
+    print("Replaced character of the string :",replacedStr)
+    print("---------------------")
+    
+def joinMethode():
+    strVar = "The best car is my Anadol"
+    joinedStr = strVar.join(["Unfortunately it is a joke"])
+    
+    print("STRING JOIN METHODE")
+    print("Join string to string :",joinedStr)
+    print("---------------------")
+    
+def countNumberInStr():
+    strVar = "The best car is my Anadol"
+    countWordtInStr = strVar.count("best")
+    countChrInStr = strVar.count("e")
+    
+    print("STRING COUNTING NUMBER OF SUBSTRING IN METHODE")
+    print("Counting number of times a substring appearsin a string :",countWordtInStr)
+    print("Counting number of times a char appears in a string :",countChrInStr)
+    print("---------------------")
+    
     
 def main():
-    basic_String_Formatting()
-    format_Litearls()
-    float_Formatting()
-    named_Placeholders()
-    numeric_Values_Formatting()
+  strMethods()
+  translateCharacters()
+  stringModule()
+  stripUnwantedChr()
+  reverseString()
+  splitString()
+  replaceChr()
+  joinMethode()
+  countNumberInStr()
     
 
 if __name__ == '__main__':

@@ -44,6 +44,7 @@ def format_Litearls():
 
 #Float Formatting
 def float_Formatting():
+    print("Float Formatting")
     print('{0:.0f}'.format(24.12345))
     print('{0:.1f}'.format(24.12345))
     print('{0:.5f}'.format(24.12345))
@@ -56,18 +57,19 @@ def float_Formatting():
     print("---------------------")
 
 def named_Placeholders():
+    print("Named Place Holders")
     carData = {'Honda': 'Civic', 'Bmw': 'f30'}
     print('{Honda} {Bmw}'.format_map(carData))
     print("---------------------")
     
 def numeric_Values_Formatting():
+    print("Numerical Formatting")
     print('{:c}'.format(65))
     print('{:d}'.format(0x0a))
     print('{0:x}'.format(10))
     print('{0:X}'.format(10))
     print('{:o}'.format(10))
     print('{:b}'.format(10))
-    print('{Honda} {Bmw}'.format_map(carData))
     print("---------------------")
     
     r, g, b = (1.0, 0.4, 0.0)

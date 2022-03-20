@@ -114,6 +114,18 @@ def recursiveFunctionsFact(n):
         return 1
     else:
         return n*factorial(n-1)
+    
+def loopInFunction(params):
+    print("LOOP FUNCTION")
+    for value in params:
+        print ('Got value {}'.format(value))
+        if value == 1:
+            # Returns from function as soon as value is 1
+            print (">>>> Got 1")
+            return
+        print ("Still looping")
+    print("---------------------")
+    return "Couldn't find 1"
 
 def main():
     #ABOUT FUNCTION ARGUMENTS
@@ -180,6 +192,11 @@ def main():
     
     #Recursive Functions
     recursiveFunctionsFact(15)
+    #----------------
+    
+    #Loop in Function
+    myList = ["TB2","AKINCI","MIUS"]
+    loopInFunction(myList)
     #----------------
     
 

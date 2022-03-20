@@ -8,16 +8,19 @@ def main():
     anothertypelist = [["object"],[1,2,3,4]]
     mylist_str = ["pazartesi","salı","çarşamba"]
     removed_last_list = []
+     #---------------------
 
     #get specific value from list #IMPORTANT
     getlist = [oldval for oldval in mylist if oldval%2==0]
     print("Even number identition : ",getlist)
-
+     #---------------------
+     
     #Concanating two list
     conclist1 = [1,2,3,4,5]
     conclist2 = [6,7,8,9]
     concend = conclist1+conclist2
     print("Concanated list = ", concend)
+     #---------------------
 
     #another way of creating 2D list
     col=5
@@ -25,24 +28,28 @@ def main():
     twodlist = [[0]*col]*row
     print("2D List ",twodlist)
     print(anothertypelist)
-
+     #---------------------
+     
     #List shape
 
-    #Mylist operations 
+    #List operations 
     mylist.append(8)#add 8 to end of the list
     mylist.insert(1,12)# insert 12 to list
     mylist.pop(6)#remove 6 from the list
     mylist.remove(2)#remove 2 from the list
     #mylist.clear()#clear the list
     mylist.reverse()#reverse list
+    #---------------------
 
     #Sorting List
     sortinglist = mylist
     sortinglist.sort()
+    #---------------------
 
     #empty list and append
     emptylist = list()
     emptylist.append(mylist)
+    #------------------------
 
     index = mylist_str.index("çarşamba")
 
@@ -52,7 +59,7 @@ def main():
     print("Longer list: ", longerlist[1][-1])
     print("List-Tuple-Dictionary variables length :" , len(mylist))
     print("Write string based list :", mylist_str[2])
-    print("Type of the list : ", type(mylist_str))
+    print("Type of the list : ", type(mylist_str))#get type of the List
     print("Get last element of the list : ",mylist[-1]) #get last element of the list
     print("Divide the list : " , mylist[0:4]) #get first 4 element in list
     print("Get first element ",longerlist[0:1])
