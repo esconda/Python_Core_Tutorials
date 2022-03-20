@@ -62,6 +62,7 @@ def writingToFile():
             writeFile.write("Toyota ")
             writeFile.write("Tesla ")
         writeFile.close()
+    print("---------------------")
     
 def iterateAllFiles():
     #To iterate all files, including in sub directories, use os.walk
@@ -89,6 +90,7 @@ def randomFileAccess():
         print("---------------------")
         mmVar.close()    
         readFile.close()
+    print("---------------------")
         
 def copyDirectoryTree():
     print("Copy directory to destination")
