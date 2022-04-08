@@ -64,7 +64,7 @@ def loadVsLoads():
         json.dump(dataLoads,json_file)
 
 
-    # Load Example
+    # -----Load Example-------
     with open(getFile("JSONDocument.json"), 'r') as file:
         data = json.load(file)
         print("----JSON DATA LOAD----")
