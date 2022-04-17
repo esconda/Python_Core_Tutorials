@@ -6,7 +6,7 @@ class StackOvFlowSpider(scrapy.Spider):
     start_urls = ['http://stackoverflow.com/questions?sort=votes'] # the parsing starts from a specific set of urls
     
     def parse(self, response): # for each request this generator yields, its response is sent to parse_question
-        print(response.css('.question-summary a::attr(href)'))
+        print(response.css('.question-summary h3 a::attr(href)'))
         for href in response.css('.question-summary h3 a::attr(href)'): # do some scraping stuffusing css selectors to find question urls
             
             full_url = response.urljoin(href.extract())
@@ -18,7 +18,6 @@ class StackOvFlowSpider(scrapy.Spider):
         return fileName
         
     def parse_question(self, response):
-        print("HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
         dataInfo = {'title': response.css('h1 a::text').extract_first(),
             'votes': response.css('.question .vote-count-post::text').extract_first(),
             'body': response.css('.question .post-text').extract_first(),
