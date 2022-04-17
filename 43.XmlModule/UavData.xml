@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF8"?>
 <UAVS minor="0" major="1">
 	<Bayraktar id="0" name="Bayraktar Defense Company">
-		<UavType uniqId="0" id="1">
+		<UavType uniqId="0" id="1" name="tb2">
             <Name>Tactical Uav TB2</Name>
             <Info>Used in any type of area</Info>
         </UavType>
-        <UavType uniqId="1" id="2">
+        <UavType uniqId="1" id="2" name="Akinci">
             <Name>Tactical Uav Akinci</Name>
             <Info>Used in any type of area</Info>
         </UavType>
     </Bayraktar>
     <Tai id="1" name="Turkish Aerospace Industries">
-		<UavType uniqId="5" id="1">
+		<UavType uniqId="5" id="1" name="Anka">
             <Name>Tactical Uav Anka</Name>
             <Info>Used in any type of area</Info>
         </UavType>
-        <UavType uniqId="8" id="2">
+        <UavType uniqId="8" id="2" name="Aksungur">
             <Name>Tactical Uav Aksungur</Name>
             <Info>Used in any type of area</Info>
         </UavType>

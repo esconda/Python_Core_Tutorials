@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<parent>
+  <child1 Name="First Element">First Element text</child1>
+  <child2 Name="Second Element">Second Element text</child2>
+  <child3 Name="Third Element">Third Element text</child3>
+</parent>
