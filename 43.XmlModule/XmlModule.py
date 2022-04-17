@@ -10,6 +10,7 @@ def getSpecFile(pFileName):
     return fileName
 
 def indendationOp(elem,level=0):
+  #Arrange all indentation for xml file
     i = "\n" + level*"  "
     if len(elem):
         if not elem.text or not elem.text.strip():
