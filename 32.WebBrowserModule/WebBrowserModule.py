@@ -11,13 +11,13 @@ def getBrowser():
     browserPath = webbrowser.get("C://Program Files (x86)//Microsoft//Edge//Application//msedge.exe")
     browser = webbrowser.get(browserPath)
     print("--BROWSER  NAME--")
-    print(browse)
+    print(browser)
     print("---------------------")  
 
 def registerBrowser():
     browserPath = webbrowser.get("C:/Program Files/Mozilla Firefox/firefox.exe")
-    browser = webbrowser.get(ff_path)
-    webbrowser.register('firefox', None, ff)
+    browser = webbrowser.get(browserPath)
+    webbrowser.register('firefox', None, browser)
     # Now to refer to use Firefox in the future you can use this
     webbrowser.get('firefox').open("https://stackoverflow.com/")
     
