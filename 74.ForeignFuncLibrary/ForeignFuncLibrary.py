@@ -16,7 +16,8 @@ def complexUsage():
     nmemb = c_uint(16)
     
 def main():
-    
+    basicUsage()
+    complexUsage()
 
 
 if __name__ == '__main__':
