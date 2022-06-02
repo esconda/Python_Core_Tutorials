@@ -1,14 +1,22 @@
 # Author: Burak Dogancay
 import argparse
 import sys
+
+from sympy import arg
 def argumentParse():
   #enter command from commandline
   parser = argparse.ArgumentParser()
-  parser.add_argument('name',help='name of user')
-  parser.add_argument('-g', '--greeting',default='Hello',help='optional alternate greeting')
+  parser.add_argument('--v','-variable',type=str,default = "Variable",help='name of user')
+  parser.add_argument('--n','-name',type=str,help='name of user')
+  parser.add_argument('--g', '-greeting',type=str,default='Hello',help='optional alternate greeting')
   
   args = parser.parse_args()
-  print("{greeting}, {name}!".format(greeting=args.greeting,name=args.name))
+  
+  variable = args.v
+  name = args.n
+  greetings = args._get_args('greeting')
+  
+  print(variable,name,greetings)
   
 def argvargs():
   words = sys.argv[1:]
@@ -41,7 +49,7 @@ def groupingArguments():
 
 def main():
   argumentParse()
-  argvargs()
+  #argvargs()
   
 if __name__ == '__main__':
     main()
