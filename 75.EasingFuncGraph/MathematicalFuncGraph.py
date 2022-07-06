@@ -10,28 +10,28 @@ class EasingBase:
         self.end = end
         self.duration = duration
 
-    def process(self, t: float) -> float:
+    def process(self, t: float) -> float:# float is expected return value type
         raise NotImplementedError
 
-    def ease(self, alpha: float) -> float:
+    def ease(self, alpha: float) -> float: # float is expected return value type
         t = self.limit[0] * (1 - alpha) + self.limit[1] * alpha
         t /= self.duration
         a = self.process(t)
         return self.end * a + self.start * (1 - a)
 
-    def __call__(self, alpha: float) -> float:
+    def __call__(self, alpha: float) -> float:# float is expected return value type
         return self.ease(alpha)
 
 class EaseInQuad(EasingBase):
-    def process(self, t: float) -> float:
+    def process(self, t: float) -> float:# float is expected return value type
         return t * t
     
 class EaseOutQuad(EasingBase):
-     def process(self, t: float) -> float:
+     def process(self, t: float) -> float:# float is expected return value type
         return 1 - (1 - t) * (1 - t)
     
 class EaseCubicOut(EasingBase):
-    def process(self, t: float) -> float:
+    def process(self, t: float) -> float:# float is expected return value type
         return t * t * t
 
 def mathPlot(xVar,yVar,pMainTitle):
