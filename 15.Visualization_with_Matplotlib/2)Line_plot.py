@@ -1,7 +1,15 @@
+from glob import glob
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 #Author: Burak Dogancay
+
+def getFile(pFileName):
+    location = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__))) #it gets the folder location
+    fileName= os.path.join(location,pFileName)#add file name to folder location
+    return fileName
+
 def main():
     # 1) pandas fast and efficient for dataframes
     # 2) We can open and examine csv and text files and save the results to these file types easily
@@ -11,8 +19,8 @@ def main():
     # 6) Help with time series data analysis
     # 7) Above all speed is a fast library with pandas optimized
 
-    #read from csv file
-    csv_info = pd.read_csv('iris.csv')
+    #read from csv file  
+    csv_info = pd.read_csv(getFile('iris.csv'))
 
     #Convert pandas to numpy array
     numpyversionzeros = np.zeros((150,5))
