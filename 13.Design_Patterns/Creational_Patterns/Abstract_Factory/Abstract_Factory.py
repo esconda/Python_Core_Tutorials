@@ -112,7 +112,7 @@ class ConcreteProductB1(AbstractProductB):
     argument.
     """
 
-    def another_useful_function_b(self, collaborator: AbstractProductA) -> str:
+    def another_useful_function_b(self, collaborator: AbstractProductA) -> str: # str is expected return value type
         result = collaborator.useful_function_a()
         return f"The result of the B1 collaborating with the ({result})"
 
