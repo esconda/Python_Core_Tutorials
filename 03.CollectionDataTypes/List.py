@@ -3,7 +3,7 @@ import os
 def main():
 
     #List can store thousands of variables
-    mylist = [1,2,3,4,5,6,7]
+    mylist = [1,9,3,4,5,6,7]
     longerlist = [[1,2,3,4,5],[3,4,5,6,7]]
     anothertypelist = [["object"],[1,2,3,4]]
     mylist_str = ["pazartesi","salı","çarşamba"]
@@ -33,10 +33,11 @@ def main():
     #List shape
 
     #List operations 
+    mylist.sort()#sort operation for list
     mylist.append(8)#add 8 to end of the list
     mylist.insert(1,12)# insert 12 to list
     mylist.pop(6)#remove 6 from the list
-    mylist.remove(2)#remove 2 from the list
+    mylist.remove(8)#remove 8 from the list
     #mylist.clear()#clear the list
     mylist.reverse()#reverse list
     #---------------------
@@ -54,7 +55,7 @@ def main():
     index = mylist_str.index("çarşamba")
 
 
-    print("removed list",mylist)
+    print("My list",mylist)
     print("Index of the list : ", index)
     print("Longer list: ", longerlist[1][-1])
     print("List-Tuple-Dictionary variables length :" , len(mylist))
@@ -63,11 +64,13 @@ def main():
     print("Get last element of the list : ",mylist[-1]) #get last element of the list
     print("Divide the list : " , mylist[0:4]) #get first 4 element in list
     print("Get first element ",longerlist[0:1])
+    print("Get last 4 element",mylist[-4:])
     print("Appending ,removing,reversing list : ", mylist)
     print("Sorting List-Tuple-Dictionary :", sortinglist)
     print("index : ",mylist.index(4,0,mylist[-1]))
     print("return the number of times x appears in the list : ",concend.count(2))
     print("reverse the element of the list :", )
+    print("If data is available in My List : ",bool(mylist.count(3)))
 
     #LIST COMPREHENSIONS
     #List comprehensions in Python are concise, syntactic constructs. They can be utilized to generate lists from other
